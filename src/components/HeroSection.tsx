@@ -42,20 +42,11 @@ const HeroSection = () => {
           <CountdownTimer />
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <button 
-            onClick={() => scrollToSection('events')}
-            className="btn-neon-primary text-lg px-10 py-5"
-          >
-            Explore Events
-          </button>
-          <button 
-            onClick={() => scrollToSection('contact')}
-            className="btn-neon-secondary text-lg px-10 py-5"
-          >
-            Contact Organizers
-          </button>
+        {/* Welcome Message */}
+        <div className="flex justify-center">
+          <div className="btn-neon-primary text-lg px-10 py-5 cursor-default">
+            Welcome to EmergeX
+          </div>
         </div>
 
         {/* Floating Decorative Elements */}
