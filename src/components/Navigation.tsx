@@ -29,8 +29,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold">
-            <span className="text-glow-primary">TechFest</span>
-            <span className="text-primary"> 2025</span>
+            <span className="text-glow-primary">EmergeX</span>
           </div>
 
           {/* Desktop Navigation */}

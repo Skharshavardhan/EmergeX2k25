@@ -1,4 +1,4 @@
-# TechFest 2025 - Easy Editing Guide
+# EmergeX - Easy Editing Guide
 
 This guide explains how to easily customize your symposium website through GitHub's web interface.
 
@@ -24,7 +24,7 @@ Change the date to your symposium date.
 **File**: `src/data/events.js` (Lines 7-11)
 ```javascript
 export const SYMPOSIUM_INFO = {
-  name: "TechFest 2025",
+  name: "EmergeX",
   subtitle: "Innovation • Technology • Excellence",
   description: "Join us for the most exciting technical symposium of the year!"
 };
@@ -116,4 +116,4 @@ If you encounter any issues:
 
 ---
 
-**Built with ❤️ for TechFest 2025**
+**Built with ❤️ for EmergeX**

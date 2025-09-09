@@ -6,7 +6,7 @@ export const SYMPOSIUM_DATE = new Date('2025-09-16T00:00:00');
 
 // SYMPOSIUM DETAILS
 export const SYMPOSIUM_INFO = {
-  name: "TechFest 2025",
+  name: "EmergeX",
   subtitle: "Innovation • Technology • Excellence",
   description: "Join us for the most exciting technical symposium of the year!"
 };

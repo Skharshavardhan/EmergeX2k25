@@ -43,7 +43,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center md:text-right">
             <p className="text-sm text-muted-foreground">
-              © 2025 TechFest Organizing Committee
+              © 2025 EmergeX Organizing Committee
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               All rights reserved
