@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Symposium Design System - Modern Glassmorphism with Neon Accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Background & Foreground */
+    --background: 230 35% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card & Surface Colors */
+    --card: 230 35% 7%;
+    --card-foreground: 210 40% 98%;
+    --glass: 230 35% 15%;
+    --glass-border: 230 20% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Primary Neon Cyan */
+    --primary: 180 100% 50%;
+    --primary-foreground: 230 35% 7%;
+    --primary-glow: 180 100% 70%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Secondary Neon Pink */
+    --secondary: 320 100% 60%;
+    --secondary-foreground: 230 35% 7%;
+    --secondary-glow: 320 100% 80%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Accent Electric Blue */
+    --accent: 240 100% 70%;
+    --accent-foreground: 230 35% 7%;
+    --accent-glow: 240 100% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted & Text */
+    --muted: 230 20% 25%;
+    --muted-foreground: 215 25% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
+    /* Interactive States */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Form Elements */
+    --border: 230 20% 25%;
+    --input: 230 20% 18%;
+    --ring: 180 100% 50%;
 
-    --radius: 0.5rem;
+    /* Design Tokens */
+    --radius: 1rem;
+    --radius-lg: 1.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(230 35% 7%) 0%, hsl(240 30% 12%) 50%, hsl(250 40% 8%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(var(--glass) / 0.1) 0%, hsl(var(--glass) / 0.05) 100%);
+
+    /* Shadows & Glows */
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-glow-secondary: 0 0 30px hsl(var(--secondary) / 0.3);
+    --shadow-glow-accent: 0 0 30px hsl(var(--accent) / 0.3);
+    --shadow-elevated: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +127,79 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-hero);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Glass Card Components */
+  .glass-card {
+    @apply bg-gradient-to-br from-glass/10 to-glass/5 backdrop-blur-xl border border-glass-border rounded-[var(--radius-lg)];
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-glow)];
+  }
+
+  /* Neon Button Variants */
+  .btn-neon-primary {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-[var(--radius)] font-semibold;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-glow)];
+    @apply border border-primary/30 backdrop-blur-sm;
+  }
+
+  .btn-neon-secondary {
+    @apply bg-gradient-to-r from-secondary to-primary text-secondary-foreground px-8 py-4 rounded-[var(--radius)] font-semibold;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-glow-secondary)];
+    @apply border border-secondary/30 backdrop-blur-sm;
+  }
+
+  .btn-glass {
+    @apply glass-card px-6 py-3 font-medium text-foreground;
+    @apply transition-all duration-300 hover:scale-105 hover:bg-glass/20;
+  }
+
+  /* Text Glows */
+  .text-glow-primary {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  .text-glow-secondary {
+    text-shadow: 0 0 20px hsl(var(--secondary) / 0.5);
+  }
+
+  /* Animated Gradients */
+  .animated-gradient {
+    background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--secondary)), hsl(var(--primary)));
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Floating Animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Pulse Glow */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseGlow {
+    from { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    to { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
   }
 }
