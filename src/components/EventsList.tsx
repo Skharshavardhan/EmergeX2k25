@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { Phone, User, GraduationCap, ExternalLink } from 'lucide-react';
+import { Phone, User, GraduationCap, ExternalLink, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { EVENTS_DATA, getTechnicalEvents, getNonTechnicalEvents } from '../data/events';
 
 const EventsList = () => {
@@ -48,20 +49,36 @@ const EventsList = () => {
               <p className="text-muted-foreground text-sm">{event.tagline}</p>
             </div>
             
-            <Button 
-              asChild 
-              size="sm" 
-              className="btn-neon-primary shrink-0"
-            >
-              <a 
-                href={event.formUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-1"
+            <div className="flex gap-2">
+              <Button 
+                asChild 
+                size="sm" 
+                variant="outline"
+                className="shrink-0"
               >
-                Register <ExternalLink className="w-3 h-3" />
-              </a>
-            </Button>
+                <Link 
+                  to={`/event/${event.id}`}
+                  className="no-underline flex items-center gap-1"
+                >
+                  <Info className="w-3 h-3" />
+                  More Info
+                </Link>
+              </Button>
+              <Button 
+                asChild 
+                size="sm" 
+                className="btn-neon-primary shrink-0"
+              >
+                <a 
+                  href={event.formUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="no-underline flex items-center gap-1"
+                >
+                  Register <ExternalLink className="w-3 h-3" />
+                </a>
+              </Button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
