@@ -1,5 +1,5 @@
-import { Phone, Mail, MapPin } from 'lucide-react';
-import { EVENTS_DATA } from '../data/events';
+import { Phone, Mail, MapPin, GraduationCap } from 'lucide-react';
+import { EVENTS_DATA, STAFF_COORDINATORS, SYMPOSIUM_INFO } from '../data/events';
 
 const ContactSection = () => {
   return (
@@ -57,6 +57,39 @@ const ContactSection = () => {
           ))}
         </div>
 
+        {/* Staff Coordinators */}
+        <div className="glass-card p-8 mb-8">
+          <h3 className="text-2xl font-bold text-glow-primary mb-6 text-center">
+            Staff Coordinators
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {STAFF_COORDINATORS.map((staff, index) => (
+              <div key={index} className="glass-card-hover p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="glass-card p-3 rounded-full">
+                    <GraduationCap className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg">{staff.name}</h4>
+                    <p className="text-sm text-muted-foreground">Faculty Coordinator</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <Phone size={16} className="text-primary" />
+                    <span className="font-mono text-sm">+91-{staff.phone}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail size={16} className="text-secondary" />
+                    <span className="text-sm">{staff.email}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* General Contact Information */}
         <div className="glass-card p-8 text-center">
           <h3 className="text-2xl font-bold text-glow-primary mb-6">
@@ -80,7 +113,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-semibold mb-1">Email Support</p>
-                <p className="text-muted-foreground text-sm">techfest2025@college.edu</p>
+                <p className="text-muted-foreground text-sm">techfest2025@velsuniv.ac.in</p>
               </div>
             </div>
             
@@ -90,7 +123,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-semibold mb-1">Venue</p>
-                <p className="text-muted-foreground text-sm">College Auditorium</p>
+                <p className="text-muted-foreground text-sm">{SYMPOSIUM_INFO.venue}</p>
               </div>
             </div>
           </div>

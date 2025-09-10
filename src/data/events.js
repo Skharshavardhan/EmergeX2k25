@@ -8,8 +8,15 @@ export const SYMPOSIUM_DATE = new Date('2025-09-16T00:00:00');
 export const SYMPOSIUM_INFO = {
   name: "EmergeX",
   subtitle: "Innovation • Technology • Excellence",
-  description: "Join us for the most exciting technical symposium of the year!"
+  description: "Join us for the most exciting technical symposium of the year!",
+  venue: "VELS University (VISTAS) Pallavaram - Shivalaya"
 };
+
+// STAFF COORDINATORS
+export const STAFF_COORDINATORS = [
+  { name: "Dr. Faculty Coordinator", phone: "98765 43210", email: "faculty@velsuniv.ac.in" },
+  { name: "Prof. Event Manager", phone: "98765 43211", email: "events@velsuniv.ac.in" }
+];
 
 // EVENTS DATA (Edit rules, form links, and contacts here)
 export const EVENTS_DATA = [

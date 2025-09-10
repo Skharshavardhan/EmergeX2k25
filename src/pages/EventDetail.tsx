@@ -1,8 +1,8 @@
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Phone, User, GraduationCap, ExternalLink, FileText } from 'lucide-react';
+import { ArrowLeft, Phone, User, GraduationCap, ExternalLink, FileText, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { getEventById } from '@/data/events';
+import { getEventById, STAFF_COORDINATORS, SYMPOSIUM_INFO } from '@/data/events';
 
 const EventDetail = () => {
   const { eventId } = useParams();
@@ -77,7 +77,7 @@ const EventDetail = () => {
             </ul>
           </section>
 
-          {/* Coordinators */}
+          {/* Student Coordinators */}
           <section className="glass-card p-6">
             <h3 className="text-xl font-bold text-foreground mb-6">Student Coordinators</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -94,12 +94,56 @@ const EventDetail = () => {
                   </div>
                   <div className="flex items-center gap-3 pl-4">
                     <Phone className="w-4 h-4 text-muted-foreground" />
-                    <span className="font-mono text-foreground">{contact.phone}</span>
+                    <span className="font-mono text-foreground">+91-{contact.phone}</span>
                   </div>
                 </div>
               )) : (
                 <div className="text-muted-foreground">No coordinators available</div>
               )}
+            </div>
+          </section>
+
+          {/* Staff Coordinators */}
+          <section className="glass-card p-6">
+            <h3 className="text-xl font-bold text-foreground mb-6">Staff Coordinators</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {STAFF_COORDINATORS.map((staff, index) => (
+                <div key={index} className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 rounded-full bg-secondary/20 text-secondary">
+                      <GraduationCap className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">{staff.name}</h4>
+                      <p className="text-sm text-muted-foreground">Faculty Coordinator</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2 pl-4">
+                    <div className="flex items-center gap-3">
+                      <Phone className="w-4 h-4 text-muted-foreground" />
+                      <span className="font-mono text-foreground">+91-{staff.phone}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Mail className="w-4 h-4 text-muted-foreground" />
+                      <span className="text-foreground">{staff.email}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Venue Information */}
+          <section className="glass-card p-6">
+            <h3 className="text-xl font-bold text-foreground mb-6">Venue</h3>
+            <div className="flex items-center gap-3">
+              <div className="p-3 rounded-full bg-accent/20 text-accent">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground">{SYMPOSIUM_INFO.venue}</h4>
+                <p className="text-sm text-muted-foreground">Event Location</p>
+              </div>
             </div>
           </section>
 
