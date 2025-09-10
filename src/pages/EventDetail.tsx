@@ -22,11 +22,11 @@ const EventDetail = () => {
             <Button 
               variant="ghost" 
               size="sm" 
-              onClick={() => navigate('/')}
+              onClick={() => navigate('/#events')}
               className="flex items-center gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back
+              Back to Events
             </Button>
             <div className="flex items-center gap-3">
               <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
