@@ -1,4 +1,4 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Phone, User, GraduationCap, ExternalLink, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -6,6 +6,7 @@ import { getEventById } from '@/data/events';
 
 const EventDetail = () => {
   const { eventId } = useParams();
+  const navigate = useNavigate();
   const event = getEventById(eventId);
 
   if (!event) {
@@ -21,7 +22,7 @@ const EventDetail = () => {
             <Button 
               variant="ghost" 
               size="sm" 
-              onClick={() => window.history.back()}
+              onClick={() => navigate('/')}
               className="flex items-center gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
