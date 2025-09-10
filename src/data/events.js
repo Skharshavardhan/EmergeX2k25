@@ -34,7 +34,7 @@ export const EVENTS_DATA = [
       "No external resources allowed",
       "Bring your own laptop"
     ],
-    formUrl: "https://forms.gle/REPLACE_WITH_DEBUGGING_FORM_LINK",
+    formUrl: "https://forms.gle/SsxcYZj6XFqz3d8T8",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_DEBUGGING_RULEBOOK_LINK",
     contacts: [
       { name: "Keerthi Villavan", phone: "93424 12051" }
@@ -53,7 +53,7 @@ export const EVENTS_DATA = [
       "HTML, CSS, JavaScript allowed",
       "Original designs only"
     ],
-    formUrl: "https://forms.gle/REPLACE_WITH_WEBSPARX_FORM_LINK",
+    formUrl: "https://forms.gle/Z3p152HGkRX2Ubgz6",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_WEBSPARX_RULEBOOK_LINK",
     contacts: [
       { name: "Surya Kalyan", phone: "90301 30798" },
@@ -73,7 +73,7 @@ export const EVENTS_DATA = [
       "Bring your own device",
       "Fair play policy strictly enforced"
     ],
-    formUrl: "https://forms.gle/REPLACE_WITH_GAMING_FORM_LINK",
+    formUrl: "https://forms.gle/oFTL42ZzcvQRKYwZ7",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_GAMING_RULEBOOK_LINK",
     contacts: [
       { name: "Subramani", phone: "86102 87150" }
@@ -92,7 +92,7 @@ export const EVENTS_DATA = [
       "Original ideas only",
       "Focus on feasibility and innovation"
     ],
-    formUrl: "https://forms.gle/REPLACE_WITH_INNOVATION_FORM_LINK",
+    formUrl: "https://forms.gle/QCkLTdx4CLeRVjgYA",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_INNOVATION_RULEBOOK_LINK",
     contacts: [
       { name: "Harshavardhan", phone: "8610539788" },
@@ -114,7 +114,7 @@ export const EVENTS_DATA = [
       "Submit in JPEG/PNG format",
       "Resolution: minimum 1920x1080"
     ],
-    formUrl: "https://forms.gle/REPLACE_WITH_PHOTOGRAPHY_FORM_LINK",
+    formUrl: "https://forms.gle/C13kotKUM78BTNuN8",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_PHOTOGRAPHY_RULEBOOK_LINK",
     contacts: [
       { name: "Kasan", phone: "99403 41106" }
@@ -133,7 +133,7 @@ export const EVENTS_DATA = [
       "8 minutes per speaker",
       "Rebuttal rounds included"
     ],
-    formUrl: "https://forms.gle/REPLACE_WITH_DEBATE_FORM_LINK",
+    formUrl: "https://forms.gle/1wJYhRXMjwNAM4sU9",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_DEBATE_RULEBOOK_LINK",
     contacts: [
       { name: "Jeevanantham S.J", phone: "87789 10461" },
@@ -153,7 +153,7 @@ export const EVENTS_DATA = [
       "Props and costumes allowed",
       "Judged on creativity and impact"
     ],
-    formUrl: "https://forms.gle/REPLACE_WITH_ADZAP_FORM_LINK",
+    formUrl: "https://forms.gle/HCudEyKYjpBYEXZSA",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_ADZAP_RULEBOOK_LINK",
     contacts: [
       { name: "Rahul Krishna", phone: "9840781462" },
