@@ -21,6 +21,14 @@ const Index = () => {
                 <span className="text-glow-primary">EmergeX</span>
               </div>
 
+              {/* Registration Button */}
+              <button
+                onClick={() => window.open('https://linktr.ee/emergex2k25', '_blank')}
+                className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-300 font-medium"
+              >
+                Register Links for Overall Registration
+              </button>
+
               {/* Tab Navigation */}
               <TabsList className="glass-card">
                 <TabsTrigger 
