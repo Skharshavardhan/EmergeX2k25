@@ -81,27 +81,18 @@ const EventsList = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 text-primary">
-                <User className="w-4 h-4" />
-                <span className="font-medium">Student Coordinator</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="w-3 h-3" />
-                <span className="font-mono">{event.contacts.student}</span>
-              </div>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2 text-primary">
+              <User className="w-4 h-4" />
+              <span className="font-medium">Student Coordinators</span>
             </div>
-            
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 text-secondary">
-                <GraduationCap className="w-4 h-4" />
-                <span className="font-medium">Staff Coordinator</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="w-3 h-3" />
-                <span className="font-mono">{event.contacts.staff}</span>
-              </div>
+            <div className="space-y-1 ml-6">
+              {event.contacts.map((contact, index) => (
+                <div key={index} className="flex items-center gap-2 text-muted-foreground">
+                  <Phone className="w-3 h-3" />
+                  <span>{contact.name} - {contact.phone}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

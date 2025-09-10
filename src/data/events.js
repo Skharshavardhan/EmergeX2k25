@@ -28,10 +28,10 @@ export const EVENTS_DATA = [
       "Bring your own laptop"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_DEBUGGING_FORM_LINK",
-    contacts: {
-      student: "+91-9000000001",
-      staff: "+91-9000000101"
-    }
+    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_DEBUGGING_RULEBOOK_LINK",
+    contacts: [
+      { name: "Keerthi Villavan", phone: "+91-93424 12051" }
+    ]
   },
   {
     id: "websparx",
@@ -47,10 +47,11 @@ export const EVENTS_DATA = [
       "Original designs only"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_WEBSPARX_FORM_LINK",
-    contacts: {
-      student: "+91-9000000002",
-      staff: "+91-9000000102"
-    }
+    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_WEBSPARX_RULEBOOK_LINK",
+    contacts: [
+      { name: "Surya Kalyan", phone: "+91-90301 30798" },
+      { name: "Anshika Rai", phone: "+91-7812872774" }
+    ]
   },
   {
     id: "gaming",
@@ -66,10 +67,10 @@ export const EVENTS_DATA = [
       "Fair play policy strictly enforced"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_GAMING_FORM_LINK",
-    contacts: {
-      student: "+91-9000000003",
-      staff: "+91-9000000103"
-    }
+    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_GAMING_RULEBOOK_LINK",
+    contacts: [
+      { name: "Subramani", phone: "+91-86102 87150" }
+    ]
   },
   {
     id: "innovation-pitch",
@@ -85,10 +86,11 @@ export const EVENTS_DATA = [
       "Focus on feasibility and innovation"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_INNOVATION_FORM_LINK",
-    contacts: {
-      student: "+91-9000000004",
-      staff: "+91-9000000104"
-    }
+    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_INNOVATION_RULEBOOK_LINK",
+    contacts: [
+      { name: "Harshavardhan", phone: "+91-8610539788" },
+      { name: "Naresh Kannan", phone: "+91-93448 14237" }
+    ]
   },
 
   // NON-TECHNICAL EVENTS
@@ -106,10 +108,10 @@ export const EVENTS_DATA = [
       "Resolution: minimum 1920x1080"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_PHOTOGRAPHY_FORM_LINK",
-    contacts: {
-      student: "+91-9000000005",
-      staff: "+91-9000000105"
-    }
+    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_PHOTOGRAPHY_RULEBOOK_LINK",
+    contacts: [
+      { name: "Kasan", phone: "+91-99403 41106" }
+    ]
   },
   {
     id: "debate",
@@ -125,10 +127,11 @@ export const EVENTS_DATA = [
       "Rebuttal rounds included"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_DEBATE_FORM_LINK",
-    contacts: {
-      student: "+91-9000000006",
-      staff: "+91-9000000106"
-    }
+    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_DEBATE_RULEBOOK_LINK",
+    contacts: [
+      { name: "Jeevanantham S.J", phone: "+91-87789 10461" },
+      { name: "Kishore", phone: "+91-6382 281 959" }
+    ]
   },
   {
     id: "adzap",
@@ -144,10 +147,11 @@ export const EVENTS_DATA = [
       "Judged on creativity and impact"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_ADZAP_FORM_LINK",
-    contacts: {
-      student: "+91-9000000007",
-      staff: "+91-9000000107"
-    }
+    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_ADZAP_RULEBOOK_LINK",
+    contacts: [
+      { name: "Rahul Krishna", phone: "+91-9840781462" },
+      { name: "Poojashree", phone: "+91-73581 91223" }
+    ]
   },
   {
     id: "poster-presentation",
@@ -163,10 +167,10 @@ export const EVENTS_DATA = [
       "Poster must be original work"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_POSTER_FORM_LINK",
-    contacts: {
-      student: "+91-9000000008",
-      staff: "+91-9000000108"
-    }
+    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_POSTER_RULEBOOK_LINK",
+    contacts: [
+      { name: "Student Coordinator", phone: "+91-9000000008" }
+    ]
   }
 ];
 

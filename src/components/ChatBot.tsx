@@ -58,7 +58,8 @@ const ChatBot = () => {
         }
         
         if (lowerMessage.includes('contact') || lowerMessage.includes('coordinator') || lowerMessage.includes('number')) {
-          return `Coordinators for ${event.title}:\n\n👨‍🎓 Student Coordinator: ${event.contacts.student}\n👨‍🏫 Staff Coordinator: ${event.contacts.staff}\n\nFeel free to contact them for any queries!`;
+          const coordinators = event.contacts.map(contact => `👨‍🎓 ${contact.name}: ${contact.phone}`).join('\n');
+          return `Student Coordinators for ${event.title}:\n\n${coordinators}\n\nFeel free to contact them for any queries!`;
         }
         
         if (lowerMessage.includes('register') || lowerMessage.includes('registration')) {
@@ -78,9 +79,10 @@ const ChatBot = () => {
     if (lowerMessage.includes('all contacts') || lowerMessage.includes('all coordinator')) {
       let contactsList = '';
       EVENTS_DATA.forEach(event => {
-        contactsList += `\n🎯 ${event.title}\n👨‍🎓 Student: ${event.contacts.student}\n👨‍🏫 Staff: ${event.contacts.staff}\n`;
+        const coordinators = event.contacts.map(contact => `👨‍🎓 ${contact.name}: ${contact.phone}`).join('\n');
+        contactsList += `\n🎯 ${event.title}\n${coordinators}\n`;
       });
-      return `Here are all event coordinators:${contactsList}\n\nFeel free to contact them for any queries!`;
+      return `Here are all student coordinators:${contactsList}\n\nFeel free to contact them for any queries!`;
     }
 
     // Symposium general info

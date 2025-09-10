@@ -1,5 +1,5 @@
 import { useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, Phone, User, GraduationCap } from 'lucide-react';
+import { ArrowLeft, Phone, User, GraduationCap, ExternalLink, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { getEventById } from '@/data/events';
@@ -78,61 +78,63 @@ const EventDetail = () => {
 
           {/* Coordinators */}
           <section className="glass-card p-6">
-            <h3 className="text-xl font-bold text-foreground mb-6">Event Coordinators</h3>
+            <h3 className="text-xl font-bold text-foreground mb-6">Student Coordinators</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Student Coordinator */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-full bg-primary/20 text-primary">
-                    <User className="w-5 h-5" />
+              {event.contacts.map((contact, index) => (
+                <div key={index} className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 rounded-full bg-primary/20 text-primary">
+                      <User className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">{contact.name}</h4>
+                      <p className="text-sm text-muted-foreground">Student Coordinator</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Student Coordinator</h4>
-                    <p className="text-sm text-muted-foreground">For general queries</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 pl-4">
-                  <Phone className="w-4 h-4 text-muted-foreground" />
-                  <span className="font-mono text-foreground">{event.contacts.student}</span>
-                </div>
-              </div>
-
-              {/* Staff Coordinator */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-full bg-secondary/20 text-secondary">
-                    <GraduationCap className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Staff Coordinator</h4>
-                    <p className="text-sm text-muted-foreground">For official matters</p>
+                  <div className="flex items-center gap-3 pl-4">
+                    <Phone className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-mono text-foreground">{contact.phone}</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 pl-4">
-                  <Phone className="w-4 h-4 text-muted-foreground" />
-                  <span className="font-mono text-foreground">{event.contacts.staff}</span>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
 
           {/* Registration */}
           <section className="glass-card p-6 text-center">
-            <h3 className="text-xl font-bold text-foreground mb-4">Ready to Participate?</h3>
-            <Button 
-              asChild 
-              size="lg"
-              className="btn-neon-primary"
-            >
-              <a 
-                href={event.formUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="no-underline"
+            <h3 className="text-xl font-bold text-foreground mb-6">Ready to Participate?</h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                asChild 
+                size="lg"
+                variant="outline"
               >
-                Register Now
-              </a>
-            </Button>
+                <a 
+                  href={event.ruleBookUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="no-underline flex items-center gap-2"
+                >
+                  <FileText className="w-4 h-4" />
+                  Rule Book
+                </a>
+              </Button>
+              <Button 
+                asChild 
+                size="lg"
+                className="btn-neon-primary"
+              >
+                <a 
+                  href={event.formUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="no-underline flex items-center gap-2"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Register Now
+                </a>
+              </Button>
+            </div>
           </section>
         </div>
       </main>
