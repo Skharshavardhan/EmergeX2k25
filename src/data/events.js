@@ -26,7 +26,7 @@ export const EVENTS_DATA = [
     title: "Debugging",
     category: "Technical",
     tagline: "Hunt the bugs, master the code",
-    image: "/events/debugging/hero.jpg",
+    image: "/lovable-uploads/8dc68a0b-e896-4555-a8bd-e3dd0a1db44e.png",
     rules: [
       "Teams of 2-3 members allowed",
       "Duration: 2 hours",
@@ -48,7 +48,7 @@ export const EVENTS_DATA = [
     title: "Web Sparx",
     category: "Technical",
     tagline: "Design the future of the web",
-    image: "/events/websparx/hero.jpg",
+    image: "/lovable-uploads/1b84cc2f-2245-41e7-8ef0-9f112054c8ed.png",
     rules: [
       "Individual participation only",
       "Duration: 3 hours",
@@ -72,7 +72,7 @@ export const EVENTS_DATA = [
     title: "Gaming",
     category: "Technical",
     tagline: "Level up your gaming skills",
-    image: "/events/gaming/hero.jpg",
+    image: "/lovable-uploads/cb159ab2-f1ed-4971-ad89-cf6be760401a.png",
     rules: [
       "Multiple gaming categories",
       "PUBG Mobile, CS:GO, FIFA",
@@ -94,7 +94,7 @@ export const EVENTS_DATA = [
     title: "Quiz",
     category: "Non-Technical",
     tagline: "Test your knowledge and win",
-    image: "/events/quiz/hero.jpg",
+    image: "/lovable-uploads/0f191145-79b5-4cf1-9595-052c6a95ecc3.png",
     rules: [
       "Teams of 2-3 members allowed",
       "Multiple rounds of questions",
@@ -116,7 +116,7 @@ export const EVENTS_DATA = [
     title: "Innovation Pitch",
     category: "Technical",
     tagline: "Present your groundbreaking ideas",
-    image: "/events/innovation-pitch/hero.jpg",
+    image: "/lovable-uploads/da09f485-80c2-4702-99db-ff071934edda.png",
     rules: [
       "Teams of 3-5 members",
       "8-minute presentation + 2-minute Q&A",
@@ -142,7 +142,7 @@ export const EVENTS_DATA = [
     title: "Photography Contest",
     category: "Non-Technical",
     tagline: "Capture moments, create memories",
-    image: "/events/photography/hero.jpg",
+    image: "/lovable-uploads/f1710c04-0e72-4563-a109-8aeed1ee44eb.png",
     rules: [
       "Individual participation only",
       "Maximum 3 entries per participant",
@@ -164,7 +164,7 @@ export const EVENTS_DATA = [
     title: "Debate",
     category: "Non-Technical",
     tagline: "Speak your mind, win hearts",
-    image: "/events/debate/hero.jpg",
+    image: "/lovable-uploads/1c6564d1-555f-485e-8b5b-f0af0440d563.png",
     rules: [
       "Teams of 2 speakers",
       "Oxford Union debate format",
@@ -188,7 +188,7 @@ export const EVENTS_DATA = [
     title: "Adzap",
     category: "Non-Technical",
     tagline: "Creativity meets marketing genius",
-    image: "/events/adzap/hero.jpg",
+    image: "/lovable-uploads/0237a381-c35e-4457-b4d8-891870a0607f.png",
     rules: [
       "Teams of 3-4 members",
       "Create and present an advertisement",
