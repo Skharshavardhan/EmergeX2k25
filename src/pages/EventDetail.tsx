@@ -23,7 +23,10 @@ const EventDetail = () => {
               variant="ghost" 
               size="sm" 
               onClick={() => {
-                window.location.href = '/#events';
+                navigate('/');
+                setTimeout(() => {
+                  document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
               }}
               className="flex items-center gap-2"
             >
