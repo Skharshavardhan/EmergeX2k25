@@ -104,34 +104,32 @@ const EventDetail = () => {
           </section>
 
           {/* Staff Coordinators */}
-          <section className="glass-card p-6">
-            <h3 className="text-xl font-bold text-foreground mb-6">Staff Coordinators</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {STAFF_COORDINATORS.map((staff, index) => (
-                <div key={index} className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-3 rounded-full bg-secondary/20 text-secondary">
-                      <GraduationCap className="w-5 h-5" />
+          {event.staffCoordinators && event.staffCoordinators.length > 0 && (
+            <section className="glass-card p-6">
+              <h3 className="text-xl font-bold text-foreground mb-6">Staff Coordinators</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {event.staffCoordinators.map((staff, index) => (
+                  <div key={index} className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="p-3 rounded-full bg-secondary/20 text-secondary">
+                        <GraduationCap className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground">{staff.name}</h4>
+                        <p className="text-sm text-muted-foreground">Faculty Coordinator</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">{staff.name}</h4>
-                      <p className="text-sm text-muted-foreground">Faculty Coordinator</p>
+                    <div className="space-y-2 pl-4">
+                      <div className="flex items-center gap-3">
+                        <Phone className="w-4 h-4 text-muted-foreground" />
+                        <span className="font-mono text-foreground">+91-{staff.phone}</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="space-y-2 pl-4">
-                    <div className="flex items-center gap-3">
-                      <Phone className="w-4 h-4 text-muted-foreground" />
-                      <span className="font-mono text-foreground">+91-{staff.phone}</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Mail className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-foreground">{staff.email}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Venue Information */}
           <section className="glass-card p-6">

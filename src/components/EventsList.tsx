@@ -96,6 +96,24 @@ const EventsList = () => {
                 <div className="text-muted-foreground">No contacts available</div>
               )}
             </div>
+            
+            {/* Staff Coordinators */}
+            {event.staffCoordinators && event.staffCoordinators.length > 0 && (
+              <>
+                <div className="flex items-center gap-2 text-secondary mt-3">
+                  <GraduationCap className="w-4 h-4" />
+                  <span className="font-medium">Staff Coordinators</span>
+                </div>
+                <div className="space-y-1 ml-6">
+                  {event.staffCoordinators.map((staff, index) => (
+                    <div key={index} className="flex items-center gap-2 text-muted-foreground">
+                      <Phone className="w-3 h-3" />
+                      <span>{staff.name} - {staff.phone}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
