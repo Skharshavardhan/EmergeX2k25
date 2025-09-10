@@ -22,11 +22,16 @@ const EventDetail = () => {
             <Button 
               variant="ghost" 
               size="sm" 
-              onClick={() => navigate('/#events')}
+              onClick={() => {
+                navigate('/');
+                setTimeout(() => {
+                  document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }}
               className="flex items-center gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to Events
+              Back
             </Button>
             <div className="flex items-center gap-3">
               <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">

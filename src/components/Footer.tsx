@@ -33,10 +33,6 @@ const Footer = () => {
                 <MapPin size={16} className="text-secondary" />
                 <span className="text-sm">{SYMPOSIUM_INFO.venue}</span>
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <Mail size={16} className="text-accent" />
-                <span className="text-sm">techfest2025@college.edu</span>
-              </div>
             </div>
           </div>
 
