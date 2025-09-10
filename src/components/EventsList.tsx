@@ -87,12 +87,14 @@ const EventsList = () => {
               <span className="font-medium">Student Coordinators</span>
             </div>
             <div className="space-y-1 ml-6">
-              {event.contacts.map((contact, index) => (
+              {Array.isArray(event.contacts) ? event.contacts.map((contact, index) => (
                 <div key={index} className="flex items-center gap-2 text-muted-foreground">
                   <Phone className="w-3 h-3" />
                   <span>{contact.name} - {contact.phone}</span>
                 </div>
-              ))}
+              )) : (
+                <div className="text-muted-foreground">No contacts available</div>
+              )}
             </div>
           </div>
         </div>
