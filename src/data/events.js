@@ -81,7 +81,7 @@ export const EVENTS_DATA = [
   },
   {
     id: "quiz",
-    title: "Quiz Block",
+    title: "Quiz",
     category: "Technical",
     tagline: "Test your knowledge and win",
     image: "/events/quiz/hero.jpg",
@@ -95,7 +95,7 @@ export const EVENTS_DATA = [
     formUrl: "https://forms.gle/REPLACE_WITH_QUIZ_FORM_LINK",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_QUIZ_RULEBOOK_LINK",
     contacts: [
-      { name: "Quiz Coordinator", phone: "REPLACE_WITH_PHONE" }
+      { name: "Sakthi", phone: "6381 907 189" }
     ]
   },
   {
