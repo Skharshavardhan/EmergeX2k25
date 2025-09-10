@@ -118,7 +118,7 @@ export const EVENTS_DATA = [
       "Cheating in any form is strictly prohibited",
       "No using electronic devices, looking up answers on internet, or receiving outside help"
     ],
-    formUrl: "https://forms.gle/REPLACE_WITH_QUIZ_FORM_LINK",
+    formUrl: "https://forms.gle/KyFy4FU4x7zcTFCN9",
     ruleBookUrl: "https://docs.google.com/document/d/1IK8BI04gc7FUHYUOtEMvLAekEEL40J95DfxuwhnIV0c/edit?usp=sharing",
     contacts: [
       { name: "Sakthi", phone: "6381 907 189" }
