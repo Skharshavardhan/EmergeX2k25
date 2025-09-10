@@ -35,7 +35,7 @@ export const EVENTS_DATA = [
       "Bring your own laptop"
     ],
     formUrl: "https://forms.gle/SsxcYZj6XFqz3d8T8",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_DEBUGGING_RULEBOOK_LINK",
+    ruleBookUrl: "https://docs.google.com/document/d/1yMHDlg6pkow83vDtHbon_0rGnTsP-WMsKkly3hCWtHM/edit?usp=sharing",
     contacts: [
       { name: "Keerthi Villavan", phone: "93424 12051" }
     ]
@@ -54,7 +54,7 @@ export const EVENTS_DATA = [
       "Original designs only"
     ],
     formUrl: "https://forms.gle/Z3p152HGkRX2Ubgz6",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_WEBSPARX_RULEBOOK_LINK",
+    ruleBookUrl: "https://docs.google.com/document/d/1W6NPmOqUw07Rj3aHrOzjWWt5zGA1MfthnR0XebvROOo/edit?usp=sharing",
     contacts: [
       { name: "Surya Kalyan", phone: "90301 30798" },
       { name: "Anshika Rai", phone: "7812872774" }
@@ -74,7 +74,7 @@ export const EVENTS_DATA = [
       "Fair play policy strictly enforced"
     ],
     formUrl: "https://forms.gle/oFTL42ZzcvQRKYwZ7",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_GAMING_RULEBOOK_LINK",
+    ruleBookUrl: "https://docs.google.com/document/d/1kqBveMYnTCvn92QwYuwqvcu6xkrRwUc_l3ndcQYQMVc/edit?usp=sharing",
     contacts: [
       { name: "Subramani", phone: "86102 87150" }
     ]
@@ -82,7 +82,7 @@ export const EVENTS_DATA = [
   {
     id: "quiz",
     title: "Quiz",
-    category: "Technical",
+    category: "Non-Technical",
     tagline: "Test your knowledge and win",
     image: "/events/quiz/hero.jpg",
     rules: [
@@ -93,7 +93,7 @@ export const EVENTS_DATA = [
       "Time limit for each round"
     ],
     formUrl: "https://forms.gle/REPLACE_WITH_QUIZ_FORM_LINK",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_QUIZ_RULEBOOK_LINK",
+    ruleBookUrl: "https://docs.google.com/document/d/1IK8BI04gc7FUHYUOtEMvLAekEEL40J95DfxuwhnIV0c/edit?usp=sharing",
     contacts: [
       { name: "Sakthi", phone: "6381 907 189" }
     ]
@@ -112,7 +112,7 @@ export const EVENTS_DATA = [
       "Focus on feasibility and innovation"
     ],
     formUrl: "https://forms.gle/QCkLTdx4CLeRVjgYA",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_INNOVATION_RULEBOOK_LINK",
+    ruleBookUrl: "https://docs.google.com/document/d/1PS3qCnAUuuds29GRqYnPUOzscuuJsvxUor1nkuPGMLM/edit?usp=sharing",
     contacts: [
       { name: "Harshavardhan", phone: "8610539788" },
       { name: "Naresh Kannan", phone: "93448 14237" }
@@ -134,7 +134,7 @@ export const EVENTS_DATA = [
       "Resolution: minimum 1920x1080"
     ],
     formUrl: "https://forms.gle/C13kotKUM78BTNuN8",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_PHOTOGRAPHY_RULEBOOK_LINK",
+    ruleBookUrl: "https://docs.google.com/document/d/1Z3y4rZupjkEdWT05W6RlNwNQDOGqmND-E-2AnmqDDd8/edit?usp=sharing",
     contacts: [
       { name: "Kasan", phone: "99403 41106" }
     ]
@@ -153,7 +153,7 @@ export const EVENTS_DATA = [
       "Rebuttal rounds included"
     ],
     formUrl: "https://forms.gle/1wJYhRXMjwNAM4sU9",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_DEBATE_RULEBOOK_LINK",
+    ruleBookUrl: "https://docs.google.com/document/d/1KkyGouCq2DKSEuI11OBcM5tSxjdOTpJTXgYcnjsdogM/edit?usp=sharing",
     contacts: [
       { name: "Jeevanantham S.J", phone: "87789 10461" },
       { name: "Kishore", phone: "6382 281 959" }
@@ -173,7 +173,7 @@ export const EVENTS_DATA = [
       "Judged on creativity and impact"
     ],
     formUrl: "https://forms.gle/HCudEyKYjpBYEXZSA",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_ADZAP_RULEBOOK_LINK",
+    ruleBookUrl: "https://docs.google.com/document/d/1p6FdcyW_i4bj3bQgcgelsI8h1XS_qSToRgG0LOseLSw/edit?tab=t.0#heading=h.p0b7yuvkoa9u",
     contacts: [
       { name: "Rahul Krishna", phone: "9840781462" },
       { name: "Poojashree", phone: "73581 91223" }
