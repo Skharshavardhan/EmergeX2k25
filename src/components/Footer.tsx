@@ -31,7 +31,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center justify-center gap-2">
                 <MapPin size={16} className="text-secondary" />
-                <span className="text-sm">College Auditorium</span>
+                <span className="text-sm">{SYMPOSIUM_INFO.venue}</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Mail size={16} className="text-accent" />

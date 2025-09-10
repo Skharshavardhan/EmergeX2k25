@@ -1,11 +1,23 @@
 import CountdownTimer from './CountdownTimer';
 import { SYMPOSIUM_INFO } from '../data/events';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onNavigateToEvents?: () => void;
+}
+
+const HeroSection = ({ onNavigateToEvents }: HeroSectionProps) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleWelcomeClick = () => {
+    if (onNavigateToEvents) {
+      onNavigateToEvents();
+    } else {
+      scrollToSection('events');
     }
   };
 
@@ -44,9 +56,12 @@ const HeroSection = () => {
 
         {/* Welcome Message */}
         <div className="flex justify-center">
-          <div className="btn-neon-primary text-lg px-10 py-5 cursor-default">
+          <button 
+            onClick={handleWelcomeClick}
+            className="btn-neon-primary text-lg px-10 py-5 cursor-pointer hover:scale-105 transition-transform duration-300"
+          >
             Welcome to EmergeX
-          </div>
+          </button>
         </div>
 
         {/* Floating Decorative Elements */}

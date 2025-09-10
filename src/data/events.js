@@ -38,6 +38,9 @@ export const EVENTS_DATA = [
     ruleBookUrl: "https://docs.google.com/document/d/1yMHDlg6pkow83vDtHbon_0rGnTsP-WMsKkly3hCWtHM/edit?usp=sharing",
     contacts: [
       { name: "Keerthi Villavan", phone: "93424 12051" }
+    ],
+    staffCoordinators: [
+      { name: "Dr.K.Sharmila", phone: "98403 64700" }
     ]
   },
   {
@@ -58,6 +61,10 @@ export const EVENTS_DATA = [
     contacts: [
       { name: "Surya Kalyan", phone: "90301 30798" },
       { name: "Anshika Rai", phone: "7812872774" }
+    ],
+    staffCoordinators: [
+      { name: "Dr.Y.Kalpana", phone: "99400 46310" },
+      { name: "Mrs.Arockiya selvi", phone: "89396 57676" }
     ]
   },
   {
@@ -77,6 +84,9 @@ export const EVENTS_DATA = [
     ruleBookUrl: "https://docs.google.com/document/d/1kqBveMYnTCvn92QwYuwqvcu6xkrRwUc_l3ndcQYQMVc/edit?usp=sharing",
     contacts: [
       { name: "Subramani", phone: "86102 87150" }
+    ],
+    staffCoordinators: [
+      { name: "Dr.V.Subha", phone: "8760290016" }
     ]
   },
   {
@@ -96,6 +106,9 @@ export const EVENTS_DATA = [
     ruleBookUrl: "https://docs.google.com/document/d/1IK8BI04gc7FUHYUOtEMvLAekEEL40J95DfxuwhnIV0c/edit?usp=sharing",
     contacts: [
       { name: "Sakthi", phone: "6381 907 189" }
+    ],
+    staffCoordinators: [
+      { name: "Dr.K.Kasturi", phone: "9791105811" }
     ]
   },
   {
@@ -116,6 +129,10 @@ export const EVENTS_DATA = [
     contacts: [
       { name: "Harshavardhan", phone: "8610539788" },
       { name: "Naresh Kannan", phone: "93448 14237" }
+    ],
+    staffCoordinators: [
+      { name: "Dr. S.Jayashree", phone: "95978 98299" },
+      { name: "Mrs. Mary Sheebha", phone: "9094028068" }
     ]
   },
 
@@ -137,6 +154,9 @@ export const EVENTS_DATA = [
     ruleBookUrl: "https://docs.google.com/document/d/1Z3y4rZupjkEdWT05W6RlNwNQDOGqmND-E-2AnmqDDd8/edit?usp=sharing",
     contacts: [
       { name: "Kasan", phone: "99403 41106" }
+    ],
+    staffCoordinators: [
+      { name: "Dr.K.Sharmila", phone: "98403 64700" }
     ]
   },
   {
@@ -157,6 +177,10 @@ export const EVENTS_DATA = [
     contacts: [
       { name: "Jeevanantham S.J", phone: "87789 10461" },
       { name: "Kishore", phone: "6382 281 959" }
+    ],
+    staffCoordinators: [
+      { name: "Dr. S.Jayashree", phone: "95978 98299" },
+      { name: "Mrs. Mary Sheebha", phone: "9094028068" }
     ]
   },
   {
@@ -177,6 +201,10 @@ export const EVENTS_DATA = [
     contacts: [
       { name: "Rahul Krishna", phone: "9840781462" },
       { name: "Poojashree", phone: "73581 91223" }
+    ],
+    staffCoordinators: [
+      { name: "Dr.Y.Kalpana", phone: "99400 46310" },
+      { name: "Mrs.Arockiya selvi", phone: "89396 57676" }
     ]
   },
 ];

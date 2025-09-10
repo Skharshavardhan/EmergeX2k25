@@ -10,10 +10,15 @@ interface EventCardProps {
     image: string;
     rules: string[];
     formUrl: string;
-    contacts: {
-      student: string;
-      staff: string;
-    };
+    ruleBookUrl: string;
+    contacts: Array<{
+      name: string;
+      phone: string;
+    }>;
+    staffCoordinators?: Array<{
+      name: string;
+      phone: string;
+    }>;
   };
 }
 
@@ -130,34 +135,63 @@ const EventCard = ({ event }: EventCardProps) => {
               {/* Contacts */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold mb-4 text-glow-secondary">Contact Coordinators</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="glass-card p-4">
-                    <p className="text-sm text-muted-foreground mb-2">Student Coordinator</p>
-                    <div className="flex items-center gap-2">
-                      <Phone size={16} className="text-primary" />
-                      <span className="font-mono">{event.contacts.student}</span>
-                    </div>
-                  </div>
-                  <div className="glass-card p-4">
-                    <p className="text-sm text-muted-foreground mb-2">Staff Coordinator</p>
-                    <div className="flex items-center gap-2">
-                      <Phone size={16} className="text-secondary" />
-                      <span className="font-mono">{event.contacts.staff}</span>
-                    </div>
+                
+                {/* Student Coordinators */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-medium mb-3 text-primary">Student Coordinators</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {event.contacts.map((contact, index) => (
+                      <div key={index} className="glass-card p-4">
+                        <p className="text-sm text-muted-foreground mb-2">{contact.name}</p>
+                        <div className="flex items-center gap-2">
+                          <Phone size={16} className="text-primary" />
+                          <span className="font-mono">+91-{contact.phone}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
+
+                {/* Staff Coordinators */}
+                {event.staffCoordinators && event.staffCoordinators.length > 0 && (
+                  <div className="mb-6">
+                    <h4 className="text-lg font-medium mb-3 text-secondary">Staff Coordinators</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {event.staffCoordinators.map((staff, index) => (
+                        <div key={index} className="glass-card p-4">
+                          <p className="text-sm text-muted-foreground mb-2">{staff.name}</p>
+                          <div className="flex items-center gap-2">
+                            <Phone size={16} className="text-secondary" />
+                            <span className="font-mono">+91-{staff.phone}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
               
-              {/* Register Button */}
-              <a 
-                href={event.formUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-neon-primary w-full text-center inline-flex items-center justify-center gap-2"
-              >
-                <ExternalLink size={20} />
-                Register Now
-              </a>
+              {/* Action Buttons */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a 
+                  href={event.ruleBookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline text-center inline-flex items-center justify-center gap-2 py-3"
+                >
+                  <ExternalLink size={20} />
+                  Rule Book
+                </a>
+                <a 
+                  href={event.formUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-neon-primary text-center inline-flex items-center justify-center gap-2 py-3"
+                >
+                  <ExternalLink size={20} />
+                  Register Now
+                </a>
+              </div>
             </div>
           </div>
         </div>

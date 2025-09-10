@@ -49,7 +49,7 @@ const Index = () => {
         {/* Tab Content */}
         <main className="pt-24">
           <TabsContent value="home" className="mt-0">
-            <HeroSection />
+            <HeroSection onNavigateToEvents={() => setActiveTab('events')} />
           </TabsContent>
           
           <TabsContent value="events" className="mt-0">

@@ -40,6 +40,7 @@ const ContactSection = () => {
               </div>
               
               <div className="space-y-3">
+                {/* Student Coordinators */}
                 {event.contacts.map((contact, contactIndex) => (
                   <div key={contactIndex} className="glass-card p-3">
                     <p className="text-xs text-muted-foreground mb-1">Student Coordinator</p>
@@ -49,6 +50,20 @@ const ContactSection = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="font-mono text-sm text-muted-foreground">+91-{contact.phone}</span>
+                    </div>
+                  </div>
+                ))}
+                
+                {/* Staff Coordinators */}
+                {event.staffCoordinators && event.staffCoordinators.map((staff, staffIndex) => (
+                  <div key={`staff-${staffIndex}`} className="glass-card p-3">
+                    <p className="text-xs text-muted-foreground mb-1">Staff Coordinator</p>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Phone size={14} className="text-secondary" />
+                      <span className="font-semibold text-sm">{staff.name}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono text-sm text-muted-foreground">+91-{staff.phone}</span>
                     </div>
                   </div>
                 ))}
