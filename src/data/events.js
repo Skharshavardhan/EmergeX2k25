@@ -30,7 +30,7 @@ export const EVENTS_DATA = [
     formUrl: "https://forms.gle/REPLACE_WITH_DEBUGGING_FORM_LINK",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_DEBUGGING_RULEBOOK_LINK",
     contacts: [
-      { name: "Keerthi Villavan", phone: "+91-93424 12051" }
+      { name: "Keerthi Villavan", phone: "93424 12051" }
     ]
   },
   {
@@ -49,8 +49,8 @@ export const EVENTS_DATA = [
     formUrl: "https://forms.gle/REPLACE_WITH_WEBSPARX_FORM_LINK",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_WEBSPARX_RULEBOOK_LINK",
     contacts: [
-      { name: "Surya Kalyan", phone: "+91-90301 30798" },
-      { name: "Anshika Rai", phone: "+91-7812872774" }
+      { name: "Surya Kalyan", phone: "90301 30798" },
+      { name: "Anshika Rai", phone: "7812872774" }
     ]
   },
   {
@@ -69,7 +69,7 @@ export const EVENTS_DATA = [
     formUrl: "https://forms.gle/REPLACE_WITH_GAMING_FORM_LINK",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_GAMING_RULEBOOK_LINK",
     contacts: [
-      { name: "Subramani", phone: "+91-86102 87150" }
+      { name: "Subramani", phone: "86102 87150" }
     ]
   },
   {
@@ -88,8 +88,8 @@ export const EVENTS_DATA = [
     formUrl: "https://forms.gle/REPLACE_WITH_INNOVATION_FORM_LINK",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_INNOVATION_RULEBOOK_LINK",
     contacts: [
-      { name: "Harshavardhan", phone: "+91-8610539788" },
-      { name: "Naresh Kannan", phone: "+91-93448 14237" }
+      { name: "Harshavardhan", phone: "8610539788" },
+      { name: "Naresh Kannan", phone: "93448 14237" }
     ]
   },
 
@@ -110,7 +110,7 @@ export const EVENTS_DATA = [
     formUrl: "https://forms.gle/REPLACE_WITH_PHOTOGRAPHY_FORM_LINK",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_PHOTOGRAPHY_RULEBOOK_LINK",
     contacts: [
-      { name: "Kasan", phone: "+91-99403 41106" }
+      { name: "Kasan", phone: "99403 41106" }
     ]
   },
   {
@@ -129,8 +129,8 @@ export const EVENTS_DATA = [
     formUrl: "https://forms.gle/REPLACE_WITH_DEBATE_FORM_LINK",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_DEBATE_RULEBOOK_LINK",
     contacts: [
-      { name: "Jeevanantham S.J", phone: "+91-87789 10461" },
-      { name: "Kishore", phone: "+91-6382 281 959" }
+      { name: "Jeevanantham S.J", phone: "87789 10461" },
+      { name: "Kishore", phone: "6382 281 959" }
     ]
   },
   {
@@ -149,8 +149,8 @@ export const EVENTS_DATA = [
     formUrl: "https://forms.gle/REPLACE_WITH_ADZAP_FORM_LINK",
     ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_ADZAP_RULEBOOK_LINK",
     contacts: [
-      { name: "Rahul Krishna", phone: "+91-9840781462" },
-      { name: "Poojashree", phone: "+91-73581 91223" }
+      { name: "Rahul Krishna", phone: "9840781462" },
+      { name: "Poojashree", phone: "73581 91223" }
     ]
   },
   {
