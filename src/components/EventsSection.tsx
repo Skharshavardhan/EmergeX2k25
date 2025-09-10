@@ -9,9 +9,17 @@ const EventsSection = () => {
           <h2 className="text-4xl md:text-6xl font-bold text-glow-primary mb-6">
             Events
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Explore our exciting lineup of competitions and showcase your skills
           </p>
+          
+          {/* Registration Button */}
+          <button
+            onClick={() => window.open('https://linktr.ee/emergex2k25', '_blank')}
+            className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-300 font-medium text-lg"
+          >
+            Register Now
+          </button>
         </div>
 
         {/* Events List */}
