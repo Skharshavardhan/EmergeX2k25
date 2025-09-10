@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import EventsSection from '../components/EventsSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
+import ChatBot from '../components/ChatBot';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -60,6 +61,9 @@ const Index = () => {
           </TabsContent>
         </main>
       </Tabs>
+      
+      {/* ChatBot */}
+      <ChatBot />
       
       <Footer />
     </div>
