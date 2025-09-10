@@ -23,7 +23,7 @@ export const EVENTS_DATA = [
   // TECHNICAL EVENTS
   {
     id: "debugging",
-    title: "Code Debug Challenge",
+    title: "Debugging",
     category: "Technical",
     tagline: "Hunt the bugs, master the code",
     image: "/events/debugging/hero.jpg",
@@ -62,7 +62,7 @@ export const EVENTS_DATA = [
   },
   {
     id: "gaming",
-    title: "E-Gaming Championship",
+    title: "Gaming",
     category: "Technical",
     tagline: "Level up your gaming skills",
     image: "/events/gaming/hero.jpg",
@@ -122,7 +122,7 @@ export const EVENTS_DATA = [
   },
   {
     id: "debate",
-    title: "Parliamentary Debate",
+    title: "Debate",
     category: "Non-Technical",
     tagline: "Speak your mind, win hearts",
     image: "/events/debate/hero.jpg",
@@ -142,7 +142,7 @@ export const EVENTS_DATA = [
   },
   {
     id: "adzap",
-    title: "Ad Zap",
+    title: "Adzap",
     category: "Non-Technical",
     tagline: "Creativity meets marketing genius",
     image: "/events/adzap/hero.jpg",
@@ -160,25 +160,6 @@ export const EVENTS_DATA = [
       { name: "Poojashree", phone: "73581 91223" }
     ]
   },
-  {
-    id: "poster-presentation",
-    title: "Poster Presentation",
-    category: "Non-Technical",
-    tagline: "Visual storytelling at its finest",
-    image: "/events/poster-presentation/hero.jpg",
-    rules: [
-      "Individual or teams of 2",
-      "A1 size poster required",
-      "Scientific/technical topics preferred",
-      "5-minute presentation",
-      "Poster must be original work"
-    ],
-    formUrl: "https://forms.gle/REPLACE_WITH_POSTER_FORM_LINK",
-    ruleBookUrl: "https://docs.google.com/document/d/REPLACE_WITH_POSTER_RULEBOOK_LINK",
-    contacts: [
-      { name: "Student Coordinator", phone: "+91-9000000008" }
-    ]
-  }
 ];
 
 // Helper functions to get events by category
