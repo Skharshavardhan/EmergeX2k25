@@ -80,7 +80,7 @@ const EventDetail = () => {
           <section className="glass-card p-6">
             <h3 className="text-xl font-bold text-foreground mb-6">Student Coordinators</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {event.contacts.map((contact, index) => (
+              {Array.isArray(event.contacts) ? event.contacts.map((contact, index) => (
                 <div key={index} className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="p-3 rounded-full bg-primary/20 text-primary">
@@ -96,7 +96,9 @@ const EventDetail = () => {
                     <span className="font-mono text-foreground">{contact.phone}</span>
                   </div>
                 </div>
-              ))}
+              )) : (
+                <div className="text-muted-foreground">No coordinators available</div>
+              )}
             </div>
           </section>
 
