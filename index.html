@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=1024, initial-scale=1.0, user-scalable=yes" />
     <title>EmergeX - College Symposium</title>
     <meta name="description" content="Join us for EmergeX - the most exciting technical symposium featuring cutting-edge events, competitions, and innovation challenges." />
     <meta name="author" content="EmergeX Organizing Committee" />
@@ -20,6 +20,42 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      // Force desktop view on mobile devices
+      (function() {
+        function isMobile() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        
+        function forceDesktopView() {
+          if (isMobile()) {
+            const viewport = document.querySelector('meta[name="viewport"]');
+            if (viewport) {
+              viewport.setAttribute('content', 'width=1024, initial-scale=0.8, maximum-scale=3.0, user-scalable=yes');
+            }
+            
+            // Add CSS to ensure desktop layout
+            const style = document.createElement('style');
+            style.textContent = `
+              @media screen and (max-width: 768px) {
+                body {
+                  min-width: 1024px;
+                  overflow-x: auto;
+                }
+                .container {
+                  min-width: 1024px;
+                }
+              }
+            `;
+            document.head.appendChild(style);
+          }
+        }
+        
+        // Apply immediately and on DOM ready
+        forceDesktopView();
+        document.addEventListener('DOMContentLoaded', forceDesktopView);
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -27,23 +27,44 @@ const ChatBot = () => {
   const generateBotResponse = (userMessage: string): string => {
     const lowerMessage = userMessage.toLowerCase();
     
+    // Registration link queries - Enhanced to catch more variations
+    if (lowerMessage.includes('registration') || lowerMessage.includes('register') || 
+        lowerMessage.includes('form') || lowerMessage.includes('link') || 
+        lowerMessage.includes('signup') || lowerMessage.includes('sign up')) {
+      
+      // Check for specific event mentions
+      for (const event of EVENTS_DATA) {
+        if (lowerMessage.includes(event.title.toLowerCase()) || 
+            lowerMessage.includes(event.id.toLowerCase())) {
+          return `🎯 Registration for ${event.title}:\n\n📝 Direct Link: ${event.formUrl}\n\n💡 You can also visit the Events section and click "Register Now" on the ${event.title} card!\n\nNeed help with anything else?`;
+        }
+      }
+      
+      // If asking for registration but no specific event mentioned
+      if (lowerMessage.includes('all') || !EVENTS_DATA.some(event => 
+          lowerMessage.includes(event.title.toLowerCase()) || lowerMessage.includes(event.id.toLowerCase()))) {
+        return `📝 Here are registration links for all events:\n\n${EVENTS_DATA.map(event => 
+          `🎯 ${event.title}: ${event.formUrl}`).join('\n\n')}\n\nOr ask me for a specific event's registration link!`;
+      }
+    }
+    
     // Event information queries
     if (lowerMessage.includes('event') || lowerMessage.includes('competition')) {
       if (lowerMessage.includes('all') || lowerMessage.includes('list')) {
         const eventsList = EVENTS_DATA.map(event => `• ${event.title} (${event.category})`).join('\n');
-        return `Here are all our events:\n\n${eventsList}\n\nWhich event would you like to know more about?`;
+        return `Here are all our events:\n\n${eventsList}\n\nWhich event would you like to know more about? I can provide registration links, rules, or coordinator contacts!`;
       }
       
       if (lowerMessage.includes('technical')) {
         const techEvents = EVENTS_DATA.filter(e => e.category === 'Technical');
         const eventsList = techEvents.map(event => `• ${event.title} - ${event.tagline}`).join('\n');
-        return `Our Technical Events:\n\n${eventsList}\n\nAsk me about any specific event for rules and registration!`;
+        return `Our Technical Events:\n\n${eventsList}\n\nAsk me for registration links, rules, or contact info for any event!`;
       }
       
       if (lowerMessage.includes('non-technical') || lowerMessage.includes('non technical')) {
         const nonTechEvents = EVENTS_DATA.filter(e => e.category === 'Non-Technical');
         const eventsList = nonTechEvents.map(event => `• ${event.title} - ${event.tagline}`).join('\n');
-        return `Our Non-Technical Events:\n\n${eventsList}\n\nAsk me about any specific event for rules and registration!`;
+        return `Our Non-Technical Events:\n\n${eventsList}\n\nAsk me for registration links, rules, or contact info for any event!`;
       }
     }
 
@@ -54,20 +75,20 @@ const ChatBot = () => {
         
         if (lowerMessage.includes('rule') || lowerMessage.includes('regulation')) {
           const rules = event.rules.map((rule, index) => `${index + 1}. ${rule}`).join('\n');
-          return `Rules for ${event.title}:\n\n${rules}\n\nNeed help with registration? Just ask!`;
+          return `Rules for ${event.title}:\n\n${rules}\n\n📝 Register here: ${event.formUrl}\n\nNeed help with anything else?`;
         }
         
         if (lowerMessage.includes('contact') || lowerMessage.includes('coordinator') || lowerMessage.includes('number')) {
-          const coordinators = event.contacts.map(contact => `👨‍🎓 ${contact.name}: ${contact.phone}`).join('\n');
-          return `Student Coordinators for ${event.title}:\n\n${coordinators}\n\nFeel free to contact them for any queries!`;
+          const coordinators = event.contacts.map(contact => `👨‍🎓 ${contact.name}: +91-${contact.phone}`).join('\n');
+          return `Student Coordinators for ${event.title}:\n\n${coordinators}\n\nFeel free to contact them for any queries!\n\n📝 Register: ${event.formUrl}`;
         }
         
-        if (lowerMessage.includes('register') || lowerMessage.includes('registration')) {
-          return `To register for ${event.title}:\n\n📝 Click here: ${event.formUrl}\n\nOr visit the Events section and click "Register" on the ${event.title} card!`;
+        if (lowerMessage.includes('register') || lowerMessage.includes('registration') || lowerMessage.includes('form') || lowerMessage.includes('link')) {
+          return `🎯 Registration for ${event.title}:\n\n📝 Click here: ${event.formUrl}\n\n📋 Rule book: ${event.ruleBookUrl}\n\nOr visit the Events section and click "Register Now" on the ${event.title} card!`;
         }
         
         // General event info
-        return `📌 ${event.title}\n🎯 ${event.tagline}\n📂 Category: ${event.category}\n\nWhat would you like to know? I can tell you about:\n• Rules and regulations\n• Coordinator contacts\n• Registration process`;
+        return `📌 ${event.title}\n🎯 ${event.tagline}\n📂 Category: ${event.category}\n\n📝 Register: ${event.formUrl}\n\nWhat would you like to know? I can tell you about:\n• Rules and regulations\n• Coordinator contacts\n• Registration process`;
       }
     }
 
@@ -79,7 +100,7 @@ const ChatBot = () => {
     if (lowerMessage.includes('all contacts') || lowerMessage.includes('all coordinator')) {
       let contactsList = '';
       EVENTS_DATA.forEach(event => {
-        const coordinators = event.contacts.map(contact => `👨‍🎓 ${contact.name}: ${contact.phone}`).join('\n');
+        const coordinators = event.contacts.map(contact => `👨‍🎓 ${contact.name}: +91-${contact.phone}`).join('\n');
         contactsList += `\n🎯 ${event.title}\n${coordinators}\n`;
       });
       return `Here are all student coordinators:${contactsList}\n\nFeel free to contact them for any queries!`;
@@ -90,18 +111,13 @@ const ChatBot = () => {
       return `🎉 Welcome to ${SYMPOSIUM_INFO.name}!\n\n✨ ${SYMPOSIUM_INFO.subtitle}\n📅 Event Date: September 16, 2025\n\n${SYMPOSIUM_INFO.description}\n\nWe have ${EVENTS_DATA.length} exciting events across Technical and Non-Technical categories. What would you like to explore?`;
     }
 
-    // Registration queries
-    if (lowerMessage.includes('register') || lowerMessage.includes('registration')) {
-      return `To register for events:\n\n1️⃣ Visit the Events tab\n2️⃣ Choose your event category\n3️⃣ Click "Register" on any event\n4️⃣ Fill out the Google Form\n\nOr ask me about a specific event and I'll provide the direct registration link!`;
-    }
-
     // Help queries
     if (lowerMessage.includes('help') || lowerMessage.includes('what can you do')) {
-      return `I can help you with:\n\n🎯 Event information and rules\n📞 Coordinator contacts\n📝 Registration guidance\n📅 Event schedules\n💡 General symposium info\n\nJust ask me anything about ${SYMPOSIUM_INFO.name}!`;
+      return `I can help you with:\n\n🎯 Event information and rules\n📝 Registration links for all events\n📞 Coordinator contacts\n📅 Event schedules\n💡 General symposium info\n\nJust ask me anything about ${SYMPOSIUM_INFO.name}!`;
     }
 
     // Default response
-    return `I'd be happy to help! You can ask me about:\n\n• Specific events (e.g., "Tell me about debugging")\n• Event rules and regulations\n• Coordinator contact numbers\n• Registration process\n• Event categories\n\nWhat would you like to know about ${SYMPOSIUM_INFO.name}?`;
+    return `I'd be happy to help! You can ask me about:\n\n• Registration links (e.g., "debugging registration link")\n• Specific events (e.g., "Tell me about debugging")\n• Event rules and regulations\n• Coordinator contact numbers\n• Event categories\n\nWhat would you like to know about ${SYMPOSIUM_INFO.name}?`;
   };
 
   const handleSendMessage = () => {
