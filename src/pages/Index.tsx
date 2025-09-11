@@ -39,7 +39,7 @@ const Index = () => {
                   value="contact" 
                   className="text-foreground hover:text-primary transition-colors duration-300 data-[state=active]:text-primary data-[state=active]:bg-primary/20"
                 >
-                  Contact Organizers
+                  Organizers
                 </TabsTrigger>
               </TabsList>
             </div>

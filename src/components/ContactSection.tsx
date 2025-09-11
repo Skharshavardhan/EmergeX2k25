@@ -16,41 +16,35 @@ const ContactSection = () => {
         </div>
 
         {/* Leadership Team */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
           {/* Dean */}
-          <div className="glass-card p-6 text-center">
-            <div className="mb-4">
-              <div className="glass-card p-3 rounded-full w-fit mx-auto mb-3">
-                <GraduationCap className="text-primary" size={24} />
-              </div>
-              <h3 className="text-lg font-bold text-glow-primary mb-1">Dean</h3>
-              <p className="text-foreground font-semibold">Dr.C.Jothi Venkateswaran</p>
+          <div className="glass-card p-4 text-center">
+            <div className="glass-card p-2 rounded-full w-fit mx-auto mb-2">
+              <GraduationCap className="text-primary" size={18} />
             </div>
+            <h3 className="text-sm font-bold text-glow-primary mb-1">Dean</h3>
+            <p className="text-foreground font-semibold text-sm">Dr.C.Jothi Venkateswaran</p>
           </div>
 
           {/* HOD */}
-          <div className="glass-card p-6 text-center">
-            <div className="mb-4">
-              <div className="glass-card p-3 rounded-full w-fit mx-auto mb-3">
-                <GraduationCap className="text-secondary" size={24} />
-              </div>
-              <h3 className="text-lg font-bold text-glow-primary mb-1">HOD</h3>
-              <p className="text-foreground font-semibold">Dr.R.Devi</p>
+          <div className="glass-card p-4 text-center">
+            <div className="glass-card p-2 rounded-full w-fit mx-auto mb-2">
+              <GraduationCap className="text-secondary" size={18} />
             </div>
+            <h3 className="text-sm font-bold text-glow-primary mb-1">HOD</h3>
+            <p className="text-foreground font-semibold text-sm">Dr.R.Devi</p>
           </div>
 
           {/* Faculty Coordinators */}
-          <div className="glass-card p-6 text-center">
-            <div className="mb-4">
-              <div className="glass-card p-3 rounded-full w-fit mx-auto mb-3">
-                <GraduationCap className="text-accent" size={24} />
-              </div>
-              <h3 className="text-lg font-bold text-glow-primary mb-1">Faculty Coordinators</h3>
-              <div className="space-y-1">
-                <p className="text-foreground font-semibold">Dr. K Kasthuri</p>
-                <p className="text-foreground font-semibold">Dr.K.Sharmila</p>
-                <p className="text-foreground font-semibold">Dr.S.Jayashree</p>
-              </div>
+          <div className="glass-card p-4 text-center">
+            <div className="glass-card p-2 rounded-full w-fit mx-auto mb-2">
+              <GraduationCap className="text-accent" size={18} />
+            </div>
+            <h3 className="text-sm font-bold text-glow-primary mb-1">Faculty Coordinators</h3>
+            <div className="space-y-0.5">
+              <p className="text-foreground font-semibold text-xs">Dr. K Kasthuri</p>
+              <p className="text-foreground font-semibold text-xs">Dr.K.Sharmila</p>
+              <p className="text-foreground font-semibold text-xs">Dr.S.Jayashree</p>
             </div>
           </div>
         </div>
