@@ -42,6 +42,7 @@ const ContactSection = () => {
             </div>
             <h3 className="text-sm font-bold text-glow-primary mb-1">Faculty Coordinators</h3>
             <div className="space-y-0.5">
+              <p className="text-foreground font-semibold text-xs">Dr.T.Kamlakannan</p>
               <p className="text-foreground font-semibold text-xs">Dr. K Kasthuri</p>
               <p className="text-foreground font-semibold text-xs">Dr.K.Sharmila</p>
               <p className="text-foreground font-semibold text-xs">Dr.S.Jayashree</p>
