@@ -31,6 +31,15 @@ const HeroSection = ({ onNavigateToEvents }: HeroSectionProps) => {
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
+        {/* Logo */}
+        <div className="mb-8">
+          <img 
+            src="/lovable-uploads/0f5b3705-532e-41ac-baca-6ded4fa0939a.png" 
+            alt="VELS Institute Logo" 
+            className="mx-auto h-24 md:h-32 w-auto object-contain"
+          />
+        </div>
+
         {/* Main Title */}
         <div className="mb-8">
           <h1 className="text-6xl md:text-8xl font-bold mb-4">
