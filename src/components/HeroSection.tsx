@@ -38,9 +38,9 @@ const HeroSection = ({ onNavigateToEvents }: HeroSectionProps) => {
             alt="VELS Institute Logo" 
             className="mx-auto h-24 md:h-32 w-auto object-contain"
           />
-          <div className="text-lg text-muted-foreground mt-4">
-            <p>School of Computing Sciences</p>
-            <p>Department of Applied Computing & Emerging Technologies</p>
+          <div className="mt-6">
+            <p className="text-2xl md:text-3xl font-bold text-primary mb-2">School of Computing Sciences</p>
+            <p className="text-xl md:text-2xl font-semibold text-secondary">Department of Applied Computing & Emerging Technologies</p>
           </div>
         </div>
 
