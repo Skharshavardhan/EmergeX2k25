@@ -8,7 +8,7 @@ export const SYMPOSIUM_DATE = new Date('2025-09-16T00:00:00');
 export const SYMPOSIUM_INFO = {
   name: "EmergeX",
   subtitle: "Innovation • Technology • Excellence",
-  description: "Join us for the most exciting technical symposium of the year!",
+  description: "Join us for the most exciting Technical Symposium of the year!",
   venue: "VELS University (VISTAS) Pallavaram - Shivalaya"
 };
 
