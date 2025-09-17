@@ -44,6 +44,9 @@ const Footer = () => {
             <p className="text-xs text-muted-foreground mt-1">
               All rights reserved
             </p>
+            <p className="text-xs text-muted-foreground mt-2 opacity-75">
+              Developed by SK Harshavardhan II<sup>nd</sup> - Data Science
+            </p>
           </div>
         </div>
       </div>
