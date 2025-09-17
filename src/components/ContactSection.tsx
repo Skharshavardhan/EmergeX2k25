@@ -114,7 +114,7 @@ const ContactSection = () => {
             General Information
           </h3>
           
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-6">
             <div className="flex flex-col items-center gap-3">
               <div className="glass-card p-4 rounded-full">
                 <MapPin className="text-accent" size={24} />
@@ -124,6 +124,15 @@ const ContactSection = () => {
                 <p className="text-muted-foreground text-sm">{SYMPOSIUM_INFO.venue}</p>
               </div>
             </div>
+          </div>
+
+          {/* Developer Credit */}
+          <div className="border-t border-border/20 pt-6">
+            <p className="text-sm text-muted-foreground">
+              Developed by <span className="font-semibold text-primary">SK Harshavardhan II<sup>nd</sup></span>
+              <br />
+              <span className="text-secondary font-medium">Data Science</span>
+            </p>
           </div>
         </div>
 
